@@ -1,0 +1,31 @@
+<script src="trabalho.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabuada</title>
+    <script>
+        
+        function exibirTabuada() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var resultado = document.getElementById("resultado");
+
+            if (isNaN(numero)) {
+                resultado.textContent = "Por favor, digite um número válido.";
+            } else {
+                resultado.textContent = ""; // Limpa o conteúdo anterior
+                for (var i = 0; i <= 10; i++) {
+                    resultado.textContent += numero + " x " + i + " = " + (numero * i) + "\n";
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <label for="numero">Digite um número:</label>
+    <input type="text" id="numero" name="numero">
+    <button onclick="exibirTabuada()">Exibir Tabuada</button>
+    <pre id="resultado"></pre>
+</body>
+</html>
